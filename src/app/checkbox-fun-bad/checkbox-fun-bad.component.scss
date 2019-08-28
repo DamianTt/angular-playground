@@ -1,0 +1,26 @@
+.checkbox-fun-bad-component {
+  .checkbox-wrapper {
+    position: relative;
+    display: flex;
+    .checkbox-input-hidden {
+      position: absolute;
+      opacity: 0;
+      width: 0;
+      height: 0;
+      // Controlled vs Uncontrolled components
+      // Never trust DOM
+      &:checked {
+        ~ .checkbox-copycat {
+          background: #ff0000;
+        }
+      }
+    }
+    .checkbox-copycat {
+      width: 32px;
+      height: 32px;
+      background: #fff;
+      border: 4px solid #000;
+      border-radius: 4px;
+    }
+  }
+}

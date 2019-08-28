@@ -5,10 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AsideObservableService } from './aside-observable.service';
 import { AsideCallbackService } from './aside-callback.service';
+import { CheckboxFunBadComponent } from './checkbox-fun-bad/checkbox-fun-bad.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CheckboxFunBadComponent
   ],
   imports: [
     BrowserModule,
