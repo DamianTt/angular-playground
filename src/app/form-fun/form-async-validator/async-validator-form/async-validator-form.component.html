@@ -1,0 +1,15 @@
+<div class="async-validator-form-component">
+  <form [formGroup]="formRepresentation" (ngSubmit)="onSubmit()">
+    <label>
+      Text input 1:
+      <input type="text" formControlName="textInput1">
+    </label>
+
+    <label>
+      Text input 2:
+      <input type="text" formControlName="textInput2">
+    </label>
+
+    <button type="submit" [disabled]="!formRepresentation.valid">Submit</button>
+  </form>
+</div>

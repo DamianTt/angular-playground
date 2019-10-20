@@ -1,0 +1,76 @@
+<div class="async-template-component">
+    This things only on ChangeDetectionStrategy.OnPush strategy
+    <div class="case-column-container">
+        <div class="case-column sync">
+            <div class="action-panel">
+                <button type="button" (click)="changeSyncVisibility(true)">Show - sync</button>
+                <button type="button" (click)="changeSyncVisibility(false)">Hide - sync</button>
+            </div>
+            <div class="result-panel sync">
+                <div>Value by &#123; &#123;: {{syncVisibility}}</div>
+                <div class="result-block-container">
+                    <span>By *ngIf: </span>
+                    <div *ngIf="syncVisibility" class="result-block"></div>
+                </div>
+                <div class="result-block-container">
+                    <span>By ngClass: </span>
+                    <div [ngClass]="syncVisibility ? '' : 'removed'" class="result-block"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="case-column async">
+            <div class="action-panel">
+                <button type="button" (click)="changeAsyncVisibility(true)">Show - async</button>
+                <button type="button" (click)="changeAsyncVisibility(false)">Hide - async</button>
+            </div>
+            <div class="result-panel">
+                <div>Value by &#123; &#123;: {{asyncVisibility}}</div>
+                <div class="result-block-container">
+                    <span>By *ngIf: </span>
+                    <div *ngIf="asyncVisibility" class="result-block"></div>
+                </div>
+                <div class="result-block-container">
+                    <span>By ngClass: </span>
+                    <div [ngClass]="asyncVisibility ? '' : 'removed'" class="result-block"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="case-column rx1">
+            <div class="action-panel">
+                <button type="button" (click)="changeRx1Visibility(true)">Show - rx1</button>
+                <button type="button" (click)="changeRx1Visibility(false)">Hide - rx1</button>
+            </div>
+            <div class="result-panel">
+                <div>Value by &#123; &#123;: {{rx1Visibility}}</div>
+                <div class="result-block-container">
+                    <span>By *ngIf: </span>
+                    <div *ngIf="rx1Visibility" class="result-block"></div>
+                </div>
+                <div class="result-block-container">
+                    <span>By ngClass: </span>
+                    <div [ngClass]="rx1Visibility ? '' : 'removed'" class="result-block"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="case-column rx2">
+            <div class="action-panel">
+                <button type="button" (click)="changeRx2Visibility(true)">Show - rx2</button>
+                <button type="button" (click)="changeRx2Visibility(false)">Hide - rx2</button>
+            </div>
+            <div class="result-panel">
+                <div>Value by &#123; &#123;: {{rx2Visibility$ | async}}</div>
+                <div class="result-block-container">
+                    <span>By *ngIf: </span>
+                    <div *ngIf="(rx2Visibility$ | async)" class="result-block"></div>
+                </div>
+                <div class="result-block-container">
+                    <span>By ngClass: </span>
+                    <div [ngClass]="(rx2Visibility$ | async) ? '' : 'removed'" class="result-block"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

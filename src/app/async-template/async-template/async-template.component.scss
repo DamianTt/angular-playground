@@ -1,0 +1,40 @@
+.async-template-component {
+  .removed {
+    display: none;
+  }
+  .case-column-container {
+    display: flex;
+    justify-content: space-around;
+    .case-column {
+      .result-panel {
+        .result-block-container {
+          display: flex;
+          .result-block {
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+      &.sync {
+        .result-block {
+          background: blue;
+        }
+      }
+      &.async {
+        .result-block {
+          background: red;
+        }
+      }
+      &.rx1 {
+        .result-block {
+          background: orange;
+        }
+      }
+      &.rx2 {
+        .result-block {
+          background: brown;
+        }
+      }
+    }
+  }
+}
