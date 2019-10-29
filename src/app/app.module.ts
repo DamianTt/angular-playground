@@ -9,13 +9,15 @@ import { CheckboxFunBadComponent } from './checkbox-fun-bad/checkbox-fun-bad.com
 import { AsyncValidatorFormComponent } from './form-fun/form-async-validator/async-validator-form/async-validator-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AsyncTemplateComponent } from './async-template/async-template/async-template.component';
+import { TripleAsyncAndDetectChangesComponent } from './random/triple-async-and-detect-changes/triple-async-and-detect-changes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CheckboxFunBadComponent,
     AsyncValidatorFormComponent,
-    AsyncTemplateComponent
+    AsyncTemplateComponent,
+    TripleAsyncAndDetectChangesComponent
   ],
   imports: [
     BrowserModule,

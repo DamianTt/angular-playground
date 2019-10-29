@@ -1,0 +1,21 @@
+<div class="triple-async-and-detect-changes-component">
+    <div>
+        <button type="button" (click)="syncChangeField()">Sync change field:</button><span>{{ordinaryField}}</span>
+    </div>
+    <div>
+        <button type="button" (click)="asyncChangeField()">Async change field:</button><span>{{asyncField}}</span>
+    </div>
+    <div>
+        <button type="button" (click)="asyncCDRChangeField()">Async+CDR change field:</button><span>{{asyncCDR}}</span>
+    </div>
+    <!-- Fails when false -->
+    <div *ngIf="(subjectField$ | async) as subjectField">
+        <button type="button" (click)="subjectChangeField()">Subject change field:</button><span>1: {{subjectField}}</span><span>2: {{subjectField}}</span><span>3: {{subjectField}}</span>
+    </div>
+    <div *ngIf="{value: subjectField$ | async} as subjectField">
+        <button type="button" (click)="subjectChangeField()">Subject change field:</button><span>1: {{subjectField.value}}</span><span>2: {{subjectField.value}}</span><span>3: {{subjectField.value}}</span>
+    </div>
+    <div>
+        <button type="button" (click)="doShit()">Do shit</button>
+    </div>
+</div>
