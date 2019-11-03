@@ -10,6 +10,8 @@ import { AsyncValidatorFormComponent } from './form-fun/form-async-validator/asy
 import { ReactiveFormsModule } from '@angular/forms';
 import { AsyncTemplateComponent } from './async-template/async-template/async-template.component';
 import { TripleAsyncAndDetectChangesComponent } from './random/triple-async-and-detect-changes/triple-async-and-detect-changes.component';
+import { CssEncComponent } from './random/css-enc/css-enc.component';
+import { CssEncChild1Component } from './random/css-enc/css-enc-child1/css-enc-child1.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { TripleAsyncAndDetectChangesComponent } from './random/triple-async-and-
     CheckboxFunBadComponent,
     AsyncValidatorFormComponent,
     AsyncTemplateComponent,
-    TripleAsyncAndDetectChangesComponent
+    TripleAsyncAndDetectChangesComponent,
+    CssEncComponent,
+    CssEncChild1Component
   ],
   imports: [
     BrowserModule,
