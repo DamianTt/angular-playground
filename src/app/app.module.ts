@@ -12,6 +12,7 @@ import { AsyncTemplateComponent } from './async-template/async-template/async-te
 import { TripleAsyncAndDetectChangesComponent } from './random/triple-async-and-detect-changes/triple-async-and-detect-changes.component';
 import { CssEncComponent } from './random/css-enc/css-enc.component';
 import { CssEncChild1Component } from './random/css-enc/css-enc-child1/css-enc-child1.component';
+import { InfiniteScrollFunComponent } from './random/infinite-scroll-fun/infinite-scroll-fun.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { CssEncChild1Component } from './random/css-enc/css-enc-child1/css-enc-c
     AsyncTemplateComponent,
     TripleAsyncAndDetectChangesComponent,
     CssEncComponent,
-    CssEncChild1Component
+    CssEncChild1Component,
+    InfiniteScrollFunComponent
   ],
   imports: [
     BrowserModule,
