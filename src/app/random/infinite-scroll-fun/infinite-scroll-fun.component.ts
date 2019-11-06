@@ -10,7 +10,7 @@ import {
   Observable,
   of
 } from 'rxjs';
-import { mergeMap, tap, take } from 'rxjs/operators';
+import { mergeMap, tap, take, delay } from 'rxjs/operators';
 
 @Component({
   selector: 'app-infinite-scroll-fun',
@@ -59,6 +59,8 @@ export class InfiniteScrollFunComponent implements OnInit, OnDestroy {
   }
 
   getMoreSkywalkers(): Observable<string[]> {
-    return of(['Skywalker', 'Skywalker', 'Skywalker']);
+    return of(['Skywalker', 'Skywalker', 'Skywalker', 'Skywalker', 'Skywalker']).pipe(
+      delay(200)
+    );
   }
 }
