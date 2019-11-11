@@ -60,7 +60,7 @@ export class InfiniteScrollFunComponent implements OnInit, OnDestroy {
 
   getMoreSkywalkers(): Observable<string[]> {
     return of(['Skywalker', 'Skywalker', 'Skywalker', 'Skywalker', 'Skywalker']).pipe(
-      delay(200)
+      delay(400)
     );
   }
 }

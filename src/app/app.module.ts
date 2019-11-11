@@ -13,6 +13,7 @@ import { TripleAsyncAndDetectChangesComponent } from './random/triple-async-and-
 import { CssEncComponent } from './random/css-enc/css-enc.component';
 import { CssEncChild1Component } from './random/css-enc/css-enc-child1/css-enc-child1.component';
 import { InfiniteScrollFunComponent } from './random/infinite-scroll-fun/infinite-scroll-fun.component';
+import { PreventParentScrollDirective } from './random/infinite-scroll-fun/prevent-parent-scroll.directive';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { InfiniteScrollFunComponent } from './random/infinite-scroll-fun/infinit
     TripleAsyncAndDetectChangesComponent,
     CssEncComponent,
     CssEncChild1Component,
-    InfiniteScrollFunComponent
+    InfiniteScrollFunComponent,
+    PreventParentScrollDirective
   ],
   imports: [
     BrowserModule,

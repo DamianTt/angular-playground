@@ -9,10 +9,12 @@
 </p>
 <button (click)="loadSkywalkers()">bbb</button>
 <div class="infinite-scroll-fun-component">
-  <div class="infinite-scroll-container">
-    <div *ngFor="let skywalker of skywalkers$ | async" class="skywalker">
-      {{ skywalker }}
+  <div class="scroll-height">
+    <div class="infinite-scroll-container" prevent-parent-scroll>
+      <div *ngFor="let skywalker of skywalkers$ | async" class="skywalker">
+        {{ skywalker }}
+      </div>
+      <div #anchor class="anchor"></div>
     </div>
-    <div #anchor class="anchor"></div>
   </div>
 </div>
