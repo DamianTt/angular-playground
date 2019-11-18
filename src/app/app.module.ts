@@ -14,6 +14,8 @@ import { CssEncComponent } from './random/css-enc/css-enc.component';
 import { CssEncChild1Component } from './random/css-enc/css-enc-child1/css-enc-child1.component';
 import { InfiniteScrollFunComponent } from './random/infinite-scroll-fun/infinite-scroll-fun.component';
 import { PreventParentScrollDirective } from './random/infinite-scroll-fun/prevent-parent-scroll.directive';
+import { DetectFullRenderComponent } from './random/detect-full-render/detect-full-render.component';
+import { DetectFullRenderService } from './random/detect-full-render/detect-full-render.service';
 
 @NgModule({
   declarations: [
@@ -25,14 +27,15 @@ import { PreventParentScrollDirective } from './random/infinite-scroll-fun/preve
     CssEncComponent,
     CssEncChild1Component,
     InfiniteScrollFunComponent,
-    PreventParentScrollDirective
+    PreventParentScrollDirective,
+    DetectFullRenderComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule
   ],
-  providers: [AsideObservableService, AsideCallbackService],
+  providers: [AsideObservableService, AsideCallbackService, DetectFullRenderService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

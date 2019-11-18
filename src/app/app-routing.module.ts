@@ -5,6 +5,7 @@ import { AsyncTemplateComponent } from './async-template/async-template/async-te
 import { TripleAsyncAndDetectChangesComponent } from './random/triple-async-and-detect-changes/triple-async-and-detect-changes.component';
 import { CssEncComponent } from './random/css-enc/css-enc.component';
 import { InfiniteScrollFunComponent } from './random/infinite-scroll-fun/infinite-scroll-fun.component';
+import { DetectFullRenderComponent } from './random/detect-full-render/detect-full-render.component';
 
 const routes: Routes = [
   { path: "form1", component: AsyncValidatorFormComponent },
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: "triple-async", component: TripleAsyncAndDetectChangesComponent },
   { path: 'css-enc', component: CssEncComponent},
   { path: 'infinite-scroll', component: InfiniteScrollFunComponent},
+  { path: 'detect-full-render', component: DetectFullRenderComponent},
   {
     path: "",
     redirectTo: "/",
