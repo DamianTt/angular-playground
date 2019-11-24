@@ -1,0 +1,14 @@
+<div class="ui-grid-component">
+  <table>
+    <thead>
+      <th *ngFor="let column of grid.config.columns">{{column.headerName}}</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of grid.dataRows">
+        <td *ngFor="let column of grid.config.columns">
+          <app-ui-grid-cell [cellData]="getCellData(row, column)" [cellRenderer]="column.cellRenderer"></app-ui-grid-cell>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

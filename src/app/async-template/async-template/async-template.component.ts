@@ -1,11 +1,11 @@
-import { Component, OnInit, ChangeDetectionStrategy } from "@angular/core";
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { timer, BehaviorSubject } from 'rxjs';
 import { tap } from 'rxjs/operators';
 
 @Component({
-  selector: "app-async-template",
-  templateUrl: "./async-template.component.html",
-  styleUrls: ["./async-template.component.scss"],
+  selector: 'app-async-template',
+  templateUrl: './async-template.component.html',
+  styleUrls: ['./async-template.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AsyncTemplateComponent implements OnInit {
@@ -29,9 +29,13 @@ export class AsyncTemplateComponent implements OnInit {
   }
 
   changeRx1Visibility(value: boolean): void {
-    timer(0).pipe(tap(() => {
-      this.rx1Visibility = value;
-    })).subscribe();
+    timer(0)
+      .pipe(
+        tap(() => {
+          this.rx1Visibility = value;
+        })
+      )
+      .subscribe();
   }
 
   changeRx2Visibility(value: boolean): void {

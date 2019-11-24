@@ -16,6 +16,10 @@ import { InfiniteScrollFunComponent } from './random/infinite-scroll-fun/infinit
 import { PreventParentScrollDirective } from './random/infinite-scroll-fun/prevent-parent-scroll.directive';
 import { DetectFullRenderComponent } from './random/detect-full-render/detect-full-render.component';
 import { DetectFullRenderService } from './random/detect-full-render/detect-full-render.service';
+import { DefaultRendererComponent } from './random/grid/renderers/default-renderer/default-renderer.component';
+import { StarGridComponent } from './random/star-grid/star-grid.component';
+import { UiGridComponent } from './random/grid/ui-grid/ui-grid.component';
+import { UiGridCellComponent } from './random/grid/ui-grid-cell/ui-grid-cell.component';
 
 @NgModule({
   declarations: [
@@ -28,14 +32,15 @@ import { DetectFullRenderService } from './random/detect-full-render/detect-full
     CssEncChild1Component,
     InfiniteScrollFunComponent,
     PreventParentScrollDirective,
-    DetectFullRenderComponent
+    DetectFullRenderComponent,
+    DefaultRendererComponent,
+    StarGridComponent,
+    UiGridComponent,
+    UiGridCellComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    ReactiveFormsModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
+  entryComponents: [DefaultRendererComponent],
   providers: [AsideObservableService, AsideCallbackService, DetectFullRenderService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
